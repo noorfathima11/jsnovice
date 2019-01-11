@@ -1,0 +1,18 @@
+   let mySet = new Set();
+   let valuej = (n-1)-1;
+   let two = new BigNumber(2);
+   let x = new BigNumber((two.pow(n-1)).minus(1)); 
+ 
+    for (let i = new BigNumber(x) ; i.isGreaterThanOrEqualTo(0) ; i = i.minus(1)) {
+        //console.log("i", i); 
+        let row = [];
+        for (let j = new BigNumber(valuej) ; j >= 0 ; j--) {
+            let po = two.pow(j); 
+            row[j] = ((i & po) ? a : b) ;
+           
+            }
+           // console.log(row);
+            let ar = row.reduce((a,b) => a+b);
+            console.log(ar);
+        } 
+        //return [...mySet]; 
